@@ -21,6 +21,15 @@ You can add a order number in your url:
 
 http://domain.com/?order=SO001
 
+Sale Order to pay
+-----------------
+
+Conditions to pay a sale order:
+
+* Get order from number (name)
+* Get order state in 'draft'
+* Get order if not paid_in_web active
+
 Confirm payments
 ----------------
 
