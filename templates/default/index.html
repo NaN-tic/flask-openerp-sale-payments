@@ -1,0 +1,35 @@
+{% extends "default/layout.html" %}
+{% block title %}Sale Order{% endblock %}
+{% block body %}
+<script src="{{ url_for('static', filename='default/js/jquery.validate.js') }}" type="text/javascript"></script>
+
+<script type="text/javascript">
+$().ready(function() {
+    $("#payment-form").validate({
+        rules: {
+            name: "required",
+            payment: "required",
+        },
+        messages: {
+            name: "{{ _('Add a Sale Order Number') }}",
+            payment: "{{ _('Select a payment type') }}",
+        }
+    });
+});
+</script>
+
+<form id="payment-form" class="payment-form" method="POST" action=".">
+    <h2 class="form-signin-heading">{{ config['TITLE'] }}</h2>
+    {% if error %}<p class=error>{{ error }}</p>{% endif %}
+    {{ form.csrf_token }}
+    {{ _("Order") }} {{ form.name(size=20) }}
+    <fieldset>
+        <legend>{{ _("Select a paytment type") }}:</legend>
+        {% for payment in payments %}<label for="{{ payment }}">
+        <input  type="radio" id="{{ payment }}" value="{{ payment }}" name="payment"> {% if payment == 'sermepa' %}{{ _("Credit Card") }}{% else %}{{ payment|capitalize }}{% endif %}
+        </label>{% endfor %}
+    </fieldset>
+    <hr/>
+    <button class="btn btn-large btn-primary" type="submit">{{ _("Go to pay") }}</button>
+</form>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "default/layout.html" %}
+{% block title %}{{ _("Paypal order %(order)s - Error." % {'order':order}) }}{% endblock %}
+{% block body %}
+<div id="payment_details" class="payment-form">
+    <h3>{{ _("An error {{ error }} occurred. Your order %(order)s is not payed." % {'order':order}) }}</h3>
+</div>
+{% endblock %}

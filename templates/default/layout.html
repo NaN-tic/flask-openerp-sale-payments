@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ config['LANGUAGE'] }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Serveis de Tryton i OpenERP en el núvol">
+    <meta name="description" content="Serveis de Tryton i OpenERP per la PyME">
+    <meta name="author" content="{{ config['AUTHOR'] }}">
+    <title>{% block title %}{% endblock %} - {{ config['TITLE'] }}</title>
+    <link href="{{ url_for('static', filename='default/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='default/css/bootstrap-responsive.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='default/css/custom.css') }}" rel="stylesheet" type="text/css">
+    <script src="{{ url_for('static', filename='default/js/jquery-1.7.2.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='default/js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='default/js/bootstrap-tooltip.js') }}" type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+    {% block body %}{% endblock %}
+    <hr>
+    {% include 'default/footer.html' %}
+</div>
+{{ config['ANALYTICS'] }}
+</body>

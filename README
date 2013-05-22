@@ -1,0 +1,104 @@
+Flask OpenERP Sale Payment
+==========================
+
+Flask OpenERP Sale Payment is a Flask App to do sale orders payments.
+
+Installing
+----------
+
+See INSTALL
+
+OpenERP modules
+---------------
+
+* Sale
+* Sale Payment Web
+
+URL Order name
+--------------
+
+You can add a order number in your url:
+
+http://domain.com/?order=SO001
+
+Confirm payments
+----------------
+
+Use OpenERP sale_payment_csv module to import CSV from your app payment (paypal, sermepa,...)
+
+Payments Configuration
+----------------------
+
+Edit config.ini and add in a list Payments methods:
+
+  PAYMENTS = ['paypal', 'sermepa']
+
+Paypal Configuration
+--------------------
+
+Create a PayPal Express checkout:
+
+* Login in your Paypal account
+* Go to Account/Your profile
+* Go to Sale options (at the end in left box blue)
+* Click in "API Access" menu.
+* Create a account API
+* Add in config.ini Paypal API values:
+
+  PAYPAL_USERNAME = 'zikzak-facilitator_api1.zikzakmedia.com'
+  PAYPAL_PASSWORD = '1368612119'
+  PAYPAL_SIGNATURE = 'ADGT8tJdhlE7T-Dn6FWubJA52QFQAshaQNudYIBhZL3Zd81ea.7fc380'
+  PAYPAL_CURRENCY = 'EUR'
+
+More information about Paypal package: https://pypi.python.org/pypi/paypal
+
+Sermepa Configuration
+--------------------
+
+Add in config.ini Sermepa values:
+
+  SERMEPA_MERCHANT_URL = 'http://www.zikzakmedia.com'
+  SERMEPA_MERCHANT_NAME = "Zikzakmedia SL"
+  SERMEPA_MERCHANT_CODE = '000000000'
+  SERMEPA_SECRET_KEY = '123456'
+  SERMEPA_TERMINAL = 1
+  SERMEPA_CURRENCY = 978
+  SERMEPA_TRANS_TYPE = 0
+
+More information about Sermepa package: https://pypi.python.org/pypi/sermepa
+
+OpenERP Configuration
+---------------------
+
+Edit config.ini and add OpenERP connection:
+
+  OPENERP_SERVER = 'http://localhost:8069'
+  OPENERP_DATABASE = 'database'
+  OPENERP_USERNAME = 'admin'
+  OPENERP_PASSWORD = 'admin'
+
+Check username have permissions to read and write in models:
+
+* sale.order
+* sale.payment.web
+
+Support
+-------
+
+For more information or if you encounter any problems with this module,
+please contact the programmers at
+
+  Zikzakmedia
+  --------------
+  website: http://www.zikzakmedia.com/
+  email: zikzak@zikzakmedia.com
+
+License
+-------
+
+See LICENSE
+
+Copyright
+---------
+
+See COPYRIGHT

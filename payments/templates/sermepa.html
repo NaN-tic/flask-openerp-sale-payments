@@ -1,0 +1,28 @@
+{% extends "default/layout.html" %}
+{% block title %}{{ _("Sermepa Payment order %(order)s." % {'order':sermepa.Ds_Merchant_Order}) }}{% endblock %}
+{% block body %}
+<div id="payment_details" class="payment-form">
+    <h3>{{ _("Your order %(order)s is in process to pay." % {'order':sermepa.Ds_Merchant_Order}) }}</h3>
+    <p>{{ _("Now we redirect to Sermepa to do a payment order.") }}</p>
+
+    <form action="{{ sermepa.Ds_Sermepa_Url }}" method="post" id="servired_standard_checkout">
+        <input type="hidden" name="Ds_Merchant_Amount" value="{{ sermepa.Ds_Merchant_Amount }}" />
+        <input type="hidden" name="Ds_Merchant_Currency" value="{{ sermepa.Ds_Merchant_Currency }}" />
+        <input type="hidden" name="Ds_Merchant_Order" value="{{ sermepa.Ds_Merchant_Order }}" />
+        <input type="hidden" name="Ds_Merchant_ProductDescription" value="{{ sermepa.Ds_Merchant_ProductDescription }}" />
+        <input type="hidden" name="Ds_Merchant_Titular" value="{{ sermepa.Ds_Merchant_Titular }}" />
+        <input type="hidden" name="Ds_Merchant_MerchantCode" value="{{ sermepa.Ds_Merchant_MerchantCode }}" />
+        <input type="hidden" name="Ds_Merchant_MerchantURL" value="{{ sermepa.Ds_Merchant_MerchantURL }}" />
+        <input type="hidden" name="Ds_Merchant_UrlOK" value="{{ sermepa.Ds_Merchant_UrlOK }}" />
+        <input type="hidden" name="Ds_Merchant_UrlKO" value="{{ sermepa.Ds_Merchant_UrlKO }}" />
+        <input type="hidden" name="Ds_Merchant_MerchantName" value="{{ sermepa.Ds_Merchant_MerchantName }}" />
+        <input type="hidden" name="Ds_Merchant_ConsumerLanguage" value="{{ sermepa.Ds_Merchant_ConsumerLanguage }}" />
+        <input type="hidden" name="Ds_Merchant_MerchantSignature" value="{{ sermepa.Ds_Merchant_MerchantSignature }}" />
+        <input type="hidden" name="Ds_Merchant_Terminal" value="{{ sermepa.Ds_Merchant_Terminal }}" />
+        <input type="hidden" name="Ds_Merchant_SumTotal" value="{{ sermepa.Ds_Merchant_SumTotal }}" />
+        <input type="hidden" name="Ds_Merchant_TransactionType" value="{{ sermepa.Ds_Merchant_TransactionType }}" />
+        <button type="submit" class="btn btn-primary btn-large">{{ _("Go to pay") }}</button>
+    </form>
+    <script type="text/javascript">document.getElementById("servired_standard_checkout").submit();</script>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "default/layout.html" %}
+{% block title %}{{ _("Paypal order %(order)s - Confirm." % {'order':order}) }}{% endblock %}
+{% block body %}
+<div id="payment_details" class="payment-form">
+    <h3>{{ _("Details your order %(order)s:" % {'order':order}) }}</h3>
+    <p>{{ message }}</a></p>
+</div>
+{% endblock %}

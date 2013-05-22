@@ -1,0 +1,6 @@
+<div id="footer" class="footer-menu">
+<ul>{% for menu in config['FOOTER_MENU'] %}
+{% for key, value in menu.iteritems() %}<li><a href="{{ key }}" alt="{{ value }}">{{ value }}</a></li>{% endfor %}
+{% endfor %}</ul>
+<p><a href="{{ config['FOOTER_URL'] }}" alt="{{ config['FOOTER'] }}">{{ config['FOOTER'] }}</a></p>
+</div>
