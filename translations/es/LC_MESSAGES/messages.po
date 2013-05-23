@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-05-22 16:51+0200\n"
-"PO-Revision-Date: 2013-05-22 17:00+0100\n"
+"POT-Creation-Date: 2013-05-23 14:21+0200\n"
+"PO-Revision-Date: 2013-05-23 14:22+0100\n"
 "Last-Translator: Raimon Esteve <resteve@zikzakmedia.com>\n"
 "Language-Team: es <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -57,36 +57,102 @@ msgstr "Ups! Tenemos un error."
 msgid "Ups! We get a human error or you don't use form to payment."
 msgstr "Ups! Tenemos un error o no usa los formularios para el pago."
 
+#: payments/templates/paypal_cancel.html:2
+#, python-format
+msgid "Paypal order %(order)s - Cancel."
+msgstr "El pedido %(order)s - Cancelado."
+
+#: payments/templates/paypal_cancel.html:5
+#: payments/templates/sermepa_cancel.html:5
+#, python-format
+msgid "Payment order %(order)s is cancelled."
+msgstr "El pedido %(order)s se ha cancelado."
+
+#: payments/templates/paypal_confirm.html:2
+#: payments/templates/paypal_confirm.html:3
+#: payments/templates/paypal_status.html:2
+#: payments/templates/paypal_status.html:3
+#, python-format
+msgid "Paypal order %(order)s - Confirm."
+msgstr "Pedido %(order)s - Confirmado."
+
 #: payments/templates/paypal_confirm.html:6
+#: payments/templates/sermepa.html:5
+#, python-format
+msgid "Your order %(order)s is in process to pay."
+msgstr "El pedido %(order)s está en proceso de pago."
+
+#: payments/templates/paypal_confirm.html:7
 msgid "Click here to complete the payment."
-msgstr "Esta a punto de realizar el pago mediante Paypal. Finaliza el proceso de pago."
+msgstr "Finalize el proceso del pago. Continuar."
+
+#: payments/templates/paypal_error.html:2
+#, python-format
+msgid "Paypal order %(order)s - Error."
+msgstr "El pedido %(order)s - Error."
+
+#: payments/templates/paypal_error.html:5
+#, python-format
+msgid "An error occurred. Your order %(order)s is not payed."
+msgstr "Un error se ha producido. El pedido %(order)s no se ha pagado."
+
+#: payments/templates/paypal_status.html:6
+#: payments/templates/sermepa_confirm.html:6
+#, python-format
+msgid "Details your order %(order)s:"
+msgstr "Detalles del pedido %(order)s"
+
+#: payments/templates/sermepa.html:2
+#, python-format
+msgid "Sermepa Payment order %(order)s."
+msgstr "Pedido de venta %(order)s"
 
 #: payments/templates/sermepa.html:6
 msgid "Now we redirect to Sermepa to do a payment order."
 msgstr "Ahora lo redireccionaremos al sistema de pago de Sermepa para procesar el pago."
 
 #: payments/templates/sermepa.html:24
-#: templates/default/index.html:33
+#: templates/default/index.html:34
 msgid "Go to pay"
 msgstr "Realizar el pago"
 
-#: templates/default/index.html:14
+#: payments/templates/sermepa_cancel.html:2
+#, python-format
+msgid "Sermepa order %(order)s - Cancel."
+msgstr "El pedido %(order)s - Cancelado."
+
+#: payments/templates/sermepa_confirm.html:2
+#: payments/templates/sermepa_confirm.html:3
+#, python-format
+msgid "Sermepa order %(order)s - Successfully."
+msgstr "Pedido %(order)s - Confirmado."
+
+#: templates/default/404.html:2
+#: templates/default/404.html:6
+msgid "404, Page Not Found"
+msgstr "404, Página no encontrada"
+
+#: templates/default/404.html:7
+msgid "<p>The requested page,</p><p>cannot be found —  </p><p>We're sorry.</p>"
+msgstr "<p>La página que está solicitando,</p><p>no se encuentra —  </p><p>Utilize los menús o el buscador.</p>"
+
+#: templates/default/index.html:15
 msgid "Add a Sale Order Number"
 msgstr "Introduzca un número de pedido"
 
-#: templates/default/index.html:15
+#: templates/default/index.html:16
 msgid "Select a payment type"
 msgstr "Seleccione un tipo de pago"
 
-#: templates/default/index.html:25
+#: templates/default/index.html:26
 msgid "Order"
 msgstr "Pedido"
 
-#: templates/default/index.html:27
+#: templates/default/index.html:28
 msgid "Select a paytment type"
 msgstr "Seleccione un tipo de pago"
 
-#: templates/default/index.html:29
+#: templates/default/index.html:30
 msgid "Credit Card"
 msgstr "Targeta de crédito"
 
