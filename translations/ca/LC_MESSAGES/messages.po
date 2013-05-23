@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-05-22 16:51+0200\n"
-"PO-Revision-Date: 2013-05-22 16:58+0100\n"
+"POT-Creation-Date: 2013-05-23 14:21+0200\n"
+"PO-Revision-Date: 2013-05-23 14:35+0100\n"
 "Last-Translator: Raimon Esteve <resteve@zikzakmedia.com>\n"
 "Language-Team: ca <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -57,36 +57,102 @@ msgstr "Ups! Tenim un error."
 msgid "Ups! We get a human error or you don't use form to payment."
 msgstr "Ups! Tenim un error humà o no està utilitzant els formularis pel pagament."
 
+#: payments/templates/paypal_cancel.html:2
+#, python-format
+msgid "Paypal order %(order)s - Cancel."
+msgstr "Comanda %(order)s - Cancel·lada."
+
+#: payments/templates/paypal_cancel.html:5
+#: payments/templates/sermepa_cancel.html:5
+#, python-format
+msgid "Payment order %(order)s is cancelled."
+msgstr "La comanda %(order)s s'ha cancel·lat."
+
+#: payments/templates/paypal_confirm.html:2
+#: payments/templates/paypal_confirm.html:3
+#: payments/templates/paypal_status.html:2
+#: payments/templates/paypal_status.html:3
+#, python-format
+msgid "Paypal order %(order)s - Confirm."
+msgstr "Comanda %(order)s - Confirmada."
+
 #: payments/templates/paypal_confirm.html:6
+#: payments/templates/sermepa.html:5
+#, python-format
+msgid "Your order %(order)s is in process to pay."
+msgstr "La comanda %(order)s es en procés de pagament."
+
+#: payments/templates/paypal_confirm.html:7
 msgid "Click here to complete the payment."
 msgstr "Està a punt de finalitzar el pagament de Paypal. Finalitza el pagament."
+
+#: payments/templates/paypal_error.html:2
+#, python-format
+msgid "Paypal order %(order)s - Error."
+msgstr "Comanda %(order)s - Error."
+
+#: payments/templates/paypal_error.html:5
+#, python-format
+msgid "An error occurred. Your order %(order)s is not payed."
+msgstr "S'ha detectat un error. La comanda %(order)s no s'ha pagat."
+
+#: payments/templates/paypal_status.html:6
+#: payments/templates/sermepa_confirm.html:6
+#, python-format
+msgid "Details your order %(order)s:"
+msgstr "Detalls de la comanda %(order)s"
+
+#: payments/templates/sermepa.html:2
+#, python-format
+msgid "Sermepa Payment order %(order)s."
+msgstr "Comanda: %(order)s"
 
 #: payments/templates/sermepa.html:6
 msgid "Now we redirect to Sermepa to do a payment order."
 msgstr "Ara el redirigirem al sistema de pagament de Sermepa per processar el pagament."
 
 #: payments/templates/sermepa.html:24
-#: templates/default/index.html:33
+#: templates/default/index.html:34
 msgid "Go to pay"
 msgstr "Realitza el pagament"
 
-#: templates/default/index.html:14
+#: payments/templates/sermepa_cancel.html:2
+#, python-format
+msgid "Sermepa order %(order)s - Cancel."
+msgstr "Comanda %(order)s - Cancel·lada."
+
+#: payments/templates/sermepa_confirm.html:2
+#: payments/templates/sermepa_confirm.html:3
+#, python-format
+msgid "Sermepa order %(order)s - Successfully."
+msgstr "Comanda %(order)s - Confirmada."
+
+#: templates/default/404.html:2
+#: templates/default/404.html:6
+msgid "404, Page Not Found"
+msgstr "404, Pàgina no trobada"
+
+#: templates/default/404.html:7
+msgid "<p>The requested page,</p><p>cannot be found —  </p><p>We're sorry.</p>"
+msgstr "<p>La pàgina que ha sol·licitat,</p><p>no es troba —  </p><p>Utilitza els menús o el cercador.</p>"
+
+#: templates/default/index.html:15
 msgid "Add a Sale Order Number"
 msgstr "Afegeix un número de comanda"
 
-#: templates/default/index.html:15
+#: templates/default/index.html:16
 msgid "Select a payment type"
 msgstr "Selecciona un tipus de pagament"
 
-#: templates/default/index.html:25
+#: templates/default/index.html:26
 msgid "Order"
 msgstr "Comanda"
 
-#: templates/default/index.html:27
+#: templates/default/index.html:28
 msgid "Select a paytment type"
 msgstr "Selecciona un tipus de pagament"
 
-#: templates/default/index.html:29
+#: templates/default/index.html:30
 msgid "Credit Card"
 msgstr "Targeta de crédit"
 
