@@ -20,8 +20,10 @@ $().ready(function() {
 </script>
 
 <form id="payment-form" class="payment-form" method="POST" action=".">
-    <h2 class="form-signin-heading">{{ config['TITLE'] }}</h2>
-    {% if error %}<p class=error>{{ error }}</p>{% endif %}
+    <div id="legend">
+        <legend class="">{{ config['TITLE'] }}</legend>
+    </div>
+    {% if error %}<div id="legend"><legend class="error">{{ error }}</legend></div>{% endif %}
     {{ form.csrf_token }}
     {{ _("Order") }} {{ form.name(size=20) }}
     <fieldset>
