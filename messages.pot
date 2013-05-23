@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-05-23 14:12+0200\n"
+"POT-Creation-Date: 2013-05-23 14:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,6 +70,23 @@ msgstr ""
 msgid "Payment order %(order)s is cancelled."
 msgstr ""
 
+#: payments/templates/paypal_confirm.html:2
+#: payments/templates/paypal_confirm.html:3
+#: payments/templates/paypal_status.html:2
+#: payments/templates/paypal_status.html:3
+#, python-format
+msgid "Paypal order %(order)s - Confirm."
+msgstr ""
+
+#: payments/templates/paypal_confirm.html:6 payments/templates/sermepa.html:5
+#, python-format
+msgid "Your order %(order)s is in process to pay."
+msgstr ""
+
+#: payments/templates/paypal_confirm.html:7
+msgid "Click here to complete the payment."
+msgstr ""
+
 #: payments/templates/paypal_error.html:2
 #, python-format
 msgid "Paypal order %(order)s - Error."
@@ -78,12 +95,6 @@ msgstr ""
 #: payments/templates/paypal_error.html:5
 #, python-format
 msgid "An error occurred. Your order %(order)s is not payed."
-msgstr ""
-
-#: payments/templates/paypal_status.html:2
-#: payments/templates/paypal_status.html:3
-#, python-format
-msgid "Paypal order %(order)s - Confirm."
 msgstr ""
 
 #: payments/templates/paypal_status.html:6
@@ -95,11 +106,6 @@ msgstr ""
 #: payments/templates/sermepa.html:2
 #, python-format
 msgid "Sermepa Payment order %(order)s."
-msgstr ""
-
-#: payments/templates/sermepa.html:5
-#, python-format
-msgid "Your order %(order)s is in process to pay."
 msgstr ""
 
 #: payments/templates/sermepa.html:6
