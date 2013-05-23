@@ -1,7 +1,7 @@
 {% extends "default/layout.html" %}
-{% block title %}{{ _("Sermepa order %(order)s - Cancel." % {'order':order}) }}{% endblock %}
+{% block title %}{{ gettext("Sermepa order %(order)s - Cancel.", order=order) }}{% endblock %}
 {% block body %}
 <div id="payment_details" class="payment-form">
-    <h3>{{ _("Payment order %(order)s is cancelled." % {'order':order}) }}</h3>
+    <h3>{{ gettext("Payment order %(order)s is cancelled.", order=order) }}</h3>
 </div>
 {% endblock %}

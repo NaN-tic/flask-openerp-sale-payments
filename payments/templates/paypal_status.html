@@ -1,9 +1,9 @@
 {% extends "default/layout.html" %}
-{% block title %}{{ _("Paypal order %(order)s - Confirm." % {'order':order}) }}{% endblock %}
-{% block description %}{{ _("Paypal order %(order)s - Confirm." % {'order':order}) }}{% endblock %}
+{% block title %}{{ gettext("Paypal order %(order)s - Confirm.", order=order) }}{% endblock %}
+{% block description %}{{ gettext("Paypal order %(order)s - Confirm.", order=order) }}{% endblock %}
 {% block body %}
 <div id="payment_details" class="payment-form">
-    <h3>{{ _("Details your order %(order)s:" % {'order':order}) }}</h3>
+    <h3>{{ gettext("Details your order %(order)s:", order=order) }}</h3>
     <p>{{ message }}</a></p>
 </div>
 {% endblock %}
