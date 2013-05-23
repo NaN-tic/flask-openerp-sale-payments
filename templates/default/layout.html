@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Serveis de Tryton i OpenERP en el núvol">
-    <meta name="description" content="Serveis de Tryton i OpenERP per la PyME">
+    <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="author" content="{{ config['AUTHOR'] }}">
     <title>{% block title %}{% endblock %} - {{ config['TITLE'] }}</title>
     <link href="{{ url_for('static', filename='default/css/bootstrap.css') }}" rel="stylesheet" type="text/css">

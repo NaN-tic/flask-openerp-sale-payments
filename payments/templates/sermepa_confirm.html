@@ -1,5 +1,6 @@
 {% extends "default/layout.html" %}
 {% block title %}{{ _("Sermepa order %(order)s - Successfully." % {'order':order}) }}{% endblock %}
+{% block description %}{{ _("Sermepa order %(order)s - Successfully." % {'order':order}) }}{% endblock %}
 {% block body %}
 <div id="payment_details" class="payment-form">
     <h3>{{ _("Details your order %(order)s:" % {'order':order}) }}</h3>
