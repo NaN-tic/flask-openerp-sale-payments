@@ -17,9 +17,9 @@ def get_order():
 
 def set_order_null():
     '''Set order null - Reset order session'''
-    session['order_id'] = None
-    session['order'] = None
-    session['amount'] = None
+    session.pop('order_id', None)
+    session.pop('order', None)
+    session.pop('amount', None)
 
 def erp_connect():
     '''OpenERP Connection'''
